@@ -2,6 +2,8 @@ import mongoose from 'mongoose';
 import { OrderStatus } from '@ojembatickets/common';
 import { TicketDoc } from './ticket';
 
+export { OrderStatus };
+
 interface OrderAttrs {
   userId: string;
   status: OrderStatus;
@@ -22,7 +24,7 @@ interface OrderModel extends mongoose.Model<OrderDoc> {
 
 const orderSchema = new mongoose.Schema(
   {
-    userid: {
+    userId: {
       type: String,
       required: true,
     },
